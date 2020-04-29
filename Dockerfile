@@ -1,5 +1,5 @@
 FROM lancachenet/generic:latest
-MAINTAINER LanCache.Net Team <team@lancache.net>
+MAINTAINER Didstopia <support@didstopia.com>
 
 ENV GENERICCACHE_VERSION=2 \
     CACHE_MODE=monolithic \
@@ -13,14 +13,14 @@ ENV GENERICCACHE_VERSION=2 \
     LOGFILE_RETENTION=3560 \
     CACHE_DOMAINS_REPO="https://github.com/uklans/cache-domains.git" \
     CACHE_DOMAINS_BRANCH=master \
-    NGINX_WORKER_PROCESSES=auto
+    NGINX_WORKER_PROCESSES=auto 
 
 COPY overlay/ /
 
 RUN mkdir -m 755 -p /data/cachedomains		;\
 	mkdir -m 755 -p /tmp/nginx				;\
 	apt-get update							;\
-	apt-get install -y jq git				;
+    apt-get install -y jq git sniproxy		;
 
 RUN git clone --depth=1 --no-single-branch https://github.com/uklans/cache-domains/ /data/cache-domains
 

@@ -1,5 +1,7 @@
 # Monolithic Game Download Cache Docker Container
 
+**IMPORTANT NOTE:** This is a fork of the original monolithic container, which simply adds the sniproxy.
+
 ![Docker Pulls](https://img.shields.io/docker/pulls/lancachenet/monolithic?label=Monolithic) ![Docker Pulls](https://img.shields.io/docker/pulls/lancachenet/lancache-dns?label=Lancache-dns) ![Docker Pulls](https://img.shields.io/docker/pulls/lancachenet/sniproxy?label=Sniproxy) ![Docker Pulls](https://img.shields.io/docker/pulls/lancachenet/generic?label=Generic)
 
 ## Documentation
